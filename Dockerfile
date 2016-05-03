@@ -1,3 +1,3 @@
-FROM mcandre/docker-ubuntu-slim:14.10
+FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y texlive-full
