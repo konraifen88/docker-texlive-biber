@@ -6,10 +6,7 @@ MAINTAINER Konrad Grüner <konraifen88@gmail.com>
 
 RUN apt-get update && apt-get install -y \
     biber \
-	texlive \
-    texlive-latex-extra \
-    texlive-lang-german \
-    texlive-generic-extra \
+	texlive-full \
     make \
     --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
