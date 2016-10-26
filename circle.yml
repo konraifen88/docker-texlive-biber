@@ -5,11 +5,11 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t konraifen88/biber-make-texlive .
+    - docker build -t konraifen88/biber-texlive .
 
 deployment:
   hub:
     branch: master
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push konraifen88/biber-make-texlive
+      - docker push konraifen88/biber-texlive
