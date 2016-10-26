@@ -1,12 +1,15 @@
-
 # TeX Live and biber
-# Adapted from koep/texlive
+# Adapted from Kamshak/docker-texlive-biber
 
-FROM debian:jessie
-MAINTAINER Valentin Funk <funk.valentin@gmail.com>
+FROM ubuntu:16.04
+MAINTAINER Konrad Grüner <konraifen88@gmail.com>
 
 RUN apt-get update && apt-get install -y \
-    texlive-full \
+    texlive \
+    texlive-latex-extra \
+    texlive-lang-german \
+    texlive-generic-extra \
+    make \
     biber \
     --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
