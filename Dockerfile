@@ -15,12 +15,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
 	texlive \
 	texlive-lang-german \
 	texlive-generic-extra \
+	texlive-bibtex-extra \
     make \
     --no-install-recommends \
-
-	## Workaround do not know why, but seems not to be installed...
-RUN DEBIAN_FRONTEND=noninteractive	apt-get update && apt-get install -y \
-	texlive-bibtex-extra
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /usr/share/doc/texlive/* \
 	&& rm -rf /usr/share/doc/texlive-* \
