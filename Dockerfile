@@ -17,7 +17,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
 	texlive-generic-extra \
 	texlive-bibtex-extra \
     make \
-    --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /usr/share/doc/texlive/* \
 	&& rm -rf /usr/share/doc/texlive-* \
