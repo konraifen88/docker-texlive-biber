@@ -12,15 +12,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
     biber \
-	texlive \
-	texlive-lang-german \
-	texlive-generic-extra \
+	texlive-full \
     make \
     --no-install-recommends \
-
-	## Workaround do not know why, but seems not to be installed...
-RUN DEBIAN_FRONTEND=noninteractive	apt-get update && apt-get install -y \
-	texlive-bibtex-extra
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /usr/share/doc/texlive/* \
 	&& rm -rf /usr/share/doc/texlive-* \
